@@ -1,6 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState,useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import "./button.css";
+import "./button.css"; 
 
 export const Login = () => {
   const history = useHistory();
@@ -12,17 +12,22 @@ export const Login = () => {
     history.push("/chat");
   };
 
-  return (
+return (
+   
     <div
-      className=" d-flex align-items-center justify-content-center"
+      className=" d-flex align-items-center "
       style={{
         height: "100vh",
-        backgroundImage: `url("https://picsum.photos/1536/735?grayscale")`,
+        backgroundImage: `url("https://picsum.photos/id/16/1536/735")`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
     >
-      <div className="container form-group w-25  d-flex align-items-center justify-content-center gap-2">
+      <div className = "container">
+      <div className="container mar-b form-group  d-flex align-items-center justify-content-center" >
+        <h1>INSTA CHAT</h1>
+      </div>
+      <div className="container form-group mar-t w-50 d-flex align-items-center justify-content-center gap-2">
         <input
           type="text"
           name=""
@@ -39,6 +44,7 @@ export const Login = () => {
           <span>Connect</span>
         </button>
       </div>
+      </div>
     </div>
   );
-};
+}

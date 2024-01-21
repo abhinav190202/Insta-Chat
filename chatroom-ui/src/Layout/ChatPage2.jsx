@@ -43,7 +43,6 @@ export const ChatPage2 = () => {
         }
         break;
       case "MESSAGE":
-        publicChats.push(payloadData);
         setPublicChats((prev) => [...prev, payloadData]);
     }
   };
@@ -68,7 +67,7 @@ export const ChatPage2 = () => {
     console.log("Connected");
     stompClient.subscribe("/chatroom/public", onMessageReceived);
     stompClient.subscribe(`/user/${username}/private`, onPrivateMessage);
-    userJoin();
+    
   };
   const onError = (err) => {
     console.log("err=>", err);
@@ -110,6 +109,8 @@ export const ChatPage2 = () => {
   //file handler method
   async function base64ConversionForImages(e) {
     if (e.target.files[0]) {
+      console.log(e.target);
+      setMessage("Attachment - ")
       getBase64(e.target.files[0]);
     }
   }
@@ -143,6 +144,7 @@ export const ChatPage2 = () => {
       );
       setMessage("");
       setMedia("");
+      userJoin();
     }
   };
 
@@ -182,7 +184,7 @@ export const ChatPage2 = () => {
       className="d-flex justify-content-center align-items-center "
       style={{
         height: "100vh",
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://picsum.photos/1536/735?grayscale")`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1526554850534-7c78330d5f90?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODJ8fENoYXR8ZW58MHx8MHx8fDA%3D")`,
         backgroundRepeat: "none",
         backgroundSize: "cover",
       }}
@@ -201,7 +203,7 @@ export const ChatPage2 = () => {
             <li
               key={"o"}
               className={`list-group-item ${
-                tab === "CHATROOM" && "bg-primary text-light"
+                tab === "CHATROOM" && "bg-success text-light"
               }`}
               onClick={() => setTab("CHATROOM")}
             >
@@ -227,12 +229,12 @@ export const ChatPage2 = () => {
           <div
             className="chat-messages p-3"
             style={{
-              height: "500px",
+              height: "50px",
               flexGrow: 1,
-              backgroundColor: "#d3d3c5",
+              backgroundColor: "transparent",
               overflowY: "scroll",
               padding: "2px",
-              border: "1px solid green",
+              // border: "5px solid white",
               display: "flex",
               flexDirection: "column",
               gap: "8px",
@@ -292,7 +294,7 @@ export const ChatPage2 = () => {
                     return (
                       <div className="d-flex justify-content-end " key={index}>
                         <div
-                          className=" bg-primary p-2"
+                          className=" bg-success p-2"
                           style={{
                             borderTopRightRadius: "5px",
                             borderTopLeftRadius: "5px",
@@ -324,7 +326,7 @@ export const ChatPage2 = () => {
                     return (
                       <div className="d-flex justify-content-start" key={index}>
                         <div
-                          className=" d-flex p-2 flex-column"
+                          className="d-flex p-2 flex-column"
                           style={{
                             borderTopRightRadius: "5px",
                             borderBottomRightRadius: "5px",

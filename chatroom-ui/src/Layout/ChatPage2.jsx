@@ -195,7 +195,7 @@ export const ChatPage2 = () => {
           className="chat-tab p-3"
           style={{
             width: "200px",
-            height: "551px",
+            height: "700px",
             backgroundColor: "transparent",
           }}
         >

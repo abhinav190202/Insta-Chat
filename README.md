@@ -61,7 +61,10 @@ Now, you can access the chat application by visiting *http://localhost:5173* on 
 1. Login Page
 <img width="1440" alt="Screenshot 2024-01-21 at 4 02 34 PM" src="https://github.com/abhinav190202/Insta-Chat/assets/82565121/10731537-5243-42c0-b4a5-f605a11a7638">
 
-2. Chat Page
+2. ChatRoom
 <img width="1440" alt="Screenshot 2024-01-21 at 4 18 38 PM" src="https://github.com/abhinav190202/Insta-Chat/assets/82565121/86bf802c-f096-43c3-bfa7-ce6afc00da03">
+
+3. Private Chat
+<img width="1440" alt="Screenshot 2024-01-21 at 4 48 14 PM" src="https://github.com/abhinav190202/Insta-Chat/assets/82565121/058f42cb-1732-449a-9287-204c86d800e2">
 
        

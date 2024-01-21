@@ -45,7 +45,9 @@ To run the project locally,
 - **Move into the chatroom-backend directory:** *cd chatroom-backend<br>*
 - **Build and Run the Backend Server:**<br>
 - *mvn clean install<br>*
-- *mvn spring-boot:run<br>*
+- *mvn spring-boot:run<br><br>*
+  
+  **NOTE : Ensure JAVA 17 is installed on your computer**
 
 ### Frontend Setup:
 - **Navigate to the Frontend Directory:** *cd chatroom-ui<br>*
@@ -53,4 +55,13 @@ To run the project locally,
 - **Start the React Development Server:** *npm run dev<br><br>*
 
 Now, you can access the chat application by visiting *http://localhost:5173* on your web browser.
+
+## Results
+
+1. Login Page
+<img width="1440" alt="Screenshot 2024-01-21 at 4 02 34 PM" src="https://github.com/abhinav190202/Insta-Chat/assets/82565121/10731537-5243-42c0-b4a5-f605a11a7638">
+
+2. Chat Page
+<img width="1440" alt="Screenshot 2024-01-21 at 4 18 38 PM" src="https://github.com/abhinav190202/Insta-Chat/assets/82565121/86bf802c-f096-43c3-bfa7-ce6afc00da03">
+
        
